@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #89C15E;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+#heading{
+    display: flex;
+    margin: 50px auto;
+    border: solid 2px white;
+    border-radius: 15px;
+    width: 60vw;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+#title{
+    color: white;
+    font-weight: 600;
+}
+
+#title h1{
+    font-size: 3rem;
+}
+
+#score{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.score{
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score h2{
+    color: #656565;
+}
+.score h1{
+    color: #252525;
+    font-size: 3.5rem;
+}
+
+#game-buttons img,
+#winner img{
+    width: 5vw;
+}
+
+
+#game-buttons{
+    margin: auto;
+    position: relative;
+}
+
+#game-buttons button{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+#game-buttons .rock{
+    border: solid 15px #0074B6;
+    position: absolute;
+    left: 30rem;
+}
+#game-buttons .scissors{
+    border: solid 15px #BD00FF;
+    position: absolute;
+    right: 30rem;
+}
+#game-buttons .paper{
+    border: solid 15px #FFA943;
+    position: absolute;
+    top: 15rem;
+    left: 43.5rem;
+}
+
+#game-buttons div{
+    height: 3vh;
+    background-color: #252525;
+    width: 23vw;
+}
+
+#game-buttons .horizontal{
+    position: absolute;
+    top: 4rem;
+    left: 36rem;
+    z-index: -1;
+}
+#game-buttons .left{
+    position: absolute;
+    transform: rotate(45deg);
+    top: 13rem;
+    left: 30rem;
+    z-index: -1;
+}
+#game-buttons .right{
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 13rem;
+    right: 30rem;
+    z-index: -1;
+}
+
+.game-wrapper{
+    position: relative;
+    height: 90vh;
+}
+
+#rules {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+}
+
+#rules .rules{
+    background-color: #004429;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: 19vw;
+    text-align: left;
+    position: relative;
+    border: solid 4px white;
+    z-index: 2;
+}
+#rules .rules h1{
+    text-align: center;
+}
+#rules .rules ul{
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#rules .rules ul li{
+    margin-top: 10px;
+}
+
+#rules .rules ul li::marker {
+    color: #FFD600;
+    font-size: 25px;
+    padding-top: 50px;
+}
+#rules .rules button{
+    position: absolute;
+    right: -15px;
+    top: -30px;
+    border: solid 4px white;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: xx-large;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#rules>button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #89C15E;
+    cursor: pointer;
+    color: white;
+    border: solid 1px white;
+    font-weight: 600;
+}
+
+#rules>button:hover{
+    background-color: white;
+    color: #89C15E;
+    transition: ease-in 0.2s;
+}
+
+
+#winner{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    margin: 7rem;
+    color: white;
+}
+
+#winner div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+#winner>div>p{
+    font-size: 1.2rem;
+}
+#winner>div>h1{
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.replay{
+    margin-top: 25px;
+    background-color: white;
+    color: #6B6B6B;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#winner .rock{
+    border: solid 15px #0074B6;
+}
+#winner .scissors{
+    border: solid 15px #BD00FF;
+}
+#winner .paper{
+    border: solid 15px #FFA943;
+}
+
+
+#congratulations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+#congratulations h1{
+    font-weight: 700;
+    font-size: 5rem;
+    margin: 25px;
+}
+
+#congratulations h2{
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+
+
+
+
+
+
+
+.pulse{
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.8;
+    animation: pulse 4s ease-out infinite;
+    cursor: pointer
+}
+@keyframes pulse {
+    0%,100% {
+        box-shadow: 0 0 0 0 #1DA82BC9, 0 0 0 0 #1DA82BC9;
+    }
+    50% {
+        box-shadow: 0 0 0 25px #2E9A2563, 0 0 0 0 #1DA82BC9;
+        box-shadow: 0 0 0 25px #1DA82BC9, 0 0 0 0 #2E9A2563;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.disp{
+    display: none !important;
+}
